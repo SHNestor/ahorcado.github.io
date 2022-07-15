@@ -13,6 +13,25 @@ body
     justify-content: center;
     align-items: center;
 }
+header
+{
+    padding: 20px 0px; /*Propiedad de espaciamiento externo, como una caja */
+}
+
+.encavezado
+{
+    text-align: center;
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.imagen
+{
+    position: absolute;
+    right: 90%;
+    display: inline;
+}
 
 #wordContainer
 {

@@ -1,7 +1,7 @@
 const nuevaPalabra= document.querySelector("#palabraNueva");
 const Button = document.getElementById('ingresarP');
 
-const words= ['hola'];
+const words= [];
 
 const newWord= () =>
 {
