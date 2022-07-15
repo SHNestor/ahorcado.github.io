@@ -1,7 +1,7 @@
 const nuevaPalabra= document.querySelector("#palabraNueva");
 const Button = document.getElementById('ingresarP');
 
-const words= [];
+const words= [ ];
 
 const newWord= () =>
 {
@@ -12,7 +12,7 @@ const newWord= () =>
        console.log(words.length);
        words.push(mensaje);
        console.log(words.length);
-       nuevaPalabra.value= " ";
+       nuevaPalabra.value= "";
 
     }
 }

@@ -35,19 +35,17 @@ const addBodyPart = bodyPart => {
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
     mistakes++;
-    if(mistakes === bodyParts.length) endGame();
-   
+    if(mistakes === bodyParts.length) 
+   {
+      alert("You are loser"); 
+      endGame();
+   }
 }
 
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
-    startButton.style.display = 'block';
-    if(hits == selectedWord.length)
-    {
-        alert("You are winner");
-    }else{
-        alert("You are loser");
-    }
+    startButton.style.display = 'block';    
+        
 }
 
 const correctLetter = letter => {
@@ -56,9 +54,15 @@ const correctLetter = letter => {
         if(children[i].innerHTML === letter) {
             children[i].classList.toggle('hidden');
             hits++;
+            console.log(hits + "  " + selectedWord);
         }
     }
-    if(hits === selectedWord.length) endGame();
+    if(hits === selectedWord.length) 
+    {
+        alert("You are winner");
+        console.log("Aciertos " + hits + selectedWord);
+        endGame();
+    }
 }
 
 const letterInput = letter => {
