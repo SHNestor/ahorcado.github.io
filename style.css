@@ -13,26 +13,34 @@ body
     justify-content: center;
     align-items: center;
 }
-header
-{
-    padding: 20px 0px; /*Propiedad de espaciamiento externo, como una caja */
-}
-
 .encavezado
 {
-    text-align: center;
-    width: 940px;
-    position: relative;
+    width: 80%;
+    /*sirve para el maximo de px a ocupar */
+    max-width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
 }
-
-.imagen
+header
 {
-    position: absolute;
-    right: 90%;
-    display: inline;
+    width: 10%;
+    padding: 20px;
+    float: left;
+    /*Nos permite acomodar el contenido total de padding */
+    /*si tenemos 700 + 20 de padding, no se suma */
+    box-sizing: border-box;
 }
+header image{
+    width: 100%;
+    height: auto;
+}
+aside{
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
 
+}
 #wordContainer
 {
     margin-top: 20px;
@@ -75,11 +83,13 @@ header
 
 #entrada
 {
+    padding: 20px;
     margin: 20px;
 }
 
 #palabraNueva
 {
+    padding: 20px;
     margin: 20px;
     appearance: none;
     font-family: 'SF Pixelate', sans-serif;
@@ -108,4 +118,23 @@ header
     font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+    .encavezado{
+        width: 100%;
+    }
+    #usedLetters{
+        width: 100%;
+        padding: 20px;
+    }
+    #wordContainer{
+        width: 100%;
+        padding: 20px;
+    }
+    #palabraNueva{
+        width: 100%;
+        padding: 20px;
+    }
+    
+    
 }
